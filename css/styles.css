@@ -1,0 +1,942 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+::selection{
+    background: var(--mainPink);
+    color: var(--mainWhite);
+}
+
+:root{
+    --mainPink:#de007b;
+    --mainWhite: #fff;
+    --lightGray: #6c6e74;
+    --mainGray: #8e8e93;
+    --mediumGray: #6b6b6b;
+    --green: #007c50;
+    --borderColor:#9598a0;
+    --lightBorderColor: #cacaca;
+    --insetColor: #e8b1cf;
+    --lightWhite9: #fafaf9;
+    --lightWhite: #fafafa;
+    --iconHover: #de007ab9;
+    --blue: #003359;
+    --yellow: #FFCB04;
+    --lightBlue: #695b80;
+    --ecolor: #eee;
+    --mainBlack: #222;
+    --hoverBlack: #444;
+    --accordionWhite: #fcfcfc;
+    --accordionBorder: #e1e1e1;
+    --shadowPurple: rgba(230, 69, 69, 0.516);
+    --shadowBlack: rgba(0,0,0,.2);
+    --accordionShadow: rgba(0,0,0,.03);
+    --focusShadow: rgba(222, 0, 123, 0.25);
+}
+
+/* search page css */
+
+.search-bg{
+    min-height: 711px;
+    max-width: 1263px;
+    margin: 0 auto;
+    background-image: url('https://www.rome2rio.com/assets/images/drive-large-1920.jpg');
+    background-size: cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.header-navbar{
+    z-index: 400;
+    width: 100%;
+    height: 44px;
+    background: none;
+    font-weight: 400;
+    padding: 0 8px;
+}
+
+.logo-link{
+    background-color: rgba(255, 255, 255, 0.943);
+}
+.logo-link img{
+    width: 86px;
+    height: 22px;
+    object-fit: cover;
+}
+
+.search-section-content{
+    margin: 170px auto 40px;
+    max-width: 1100px;
+    padding: 0 24px;
+}
+
+.search-headline{
+    width: 50%;
+}
+
+.h5{
+    font-size: 16px;
+    letter-spacing: .4em;
+    line-height: 1.4;
+}
+.search-title{
+    font-size: 60px;
+    text-shadow: 2px 2px 8px var(--shadowBlack);
+    letter-spacing: 0;
+    margin: 12px 0 12px -2px;
+}
+
+.search{
+    max-width: 450px;
+    min-width: 450px;
+    min-height: 380px;
+    width: 50%;
+    background-color: var(--lightWhite);
+    box-shadow: 2px 2px 20px rgba(0,0,0,.35);
+}
+
+.search-container{
+    padding: 32px;
+}
+
+.search-fields .travel-from span{
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .1em;
+    color: var(--mainGray);
+    margin-bottom: 6px;
+}
+
+.travel-from input{
+    background-color: var(--accordionWhite);
+    border: 1px solid var(--accordionBorder);
+    height: 48px;
+    width: 368px;
+    font-size: 18px;
+}
+
+.search_input::placeholder{
+    color: var(--mainBlack);
+    padding: 6px;
+}
+
+.change-icon{
+    background: var(--mainWhite);
+    padding: 14px;
+    left: 324px;
+    top: 4px;
+    transition: all .4s ease;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    cursor: pointer;
+}
+
+.change-icon:hover{
+    background-color: var(--iconHover);
+}
+
+.travel-from{
+    top: 58%;
+}
+
+.search-button-cover{
+    top: 82%;
+}
+
+.search-button{
+    font-size: 16px;
+    letter-spacing: .05em;
+    width: 368px;
+    height: 48px;
+    min-width: 140px;
+    background: var(--mainPink);
+    margin: 0 auto;
+}
+
+.search-button i{
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.search_section_footer{
+    max-width: 1263px;
+    padding: 24px 0;
+    background-color: var(--mainWhite);
+    width: 100%;
+    height: 70px;
+    z-index: 5;
+    box-shadow: 0 1px 10px var(--shadowBlack);
+    margin: 0 auto;
+}
+
+.search_footer-container, .explore-link{
+    margin: 0 62px;
+}
+
+.explore-link:hover{
+    text-shadow: 4px 2px 8px var(--shadowPurple);
+}
+
+.search_footer_list li a{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--mainGray);
+}
+
+.search_footer_list li a:hover{
+    color: var(--hoverBlack);
+}
+
+.search_footer-container .search_footer_list li:not(:first-of-type):before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background-color: var(--mainGray);
+    display: inline-block;
+    margin: 0 0.7em;
+    vertical-align: middle;
+}
+
+.explore-link{
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: .4em;
+    font-weight: 500;
+    color: var(--mainPink);
+}
+
+.hotel-room-banner{
+    background-color: var(--blue);
+    color: var(--mainWhite);
+    margin: 32px auto 0;
+    height: 100px;
+    width: 728px;
+    padding: 22px;
+}
+
+.room-title{
+    margin: 0;
+}
+
+.room-banner_list{
+    margin-top: 18px;
+    margin-left: 30px;
+}
+.room-banner_list li img{
+    width: 110px;
+    height: 36px;
+    margin-left: 4px;
+}
+
+.book-now{
+    padding: 4px 12px;
+    border-radius: 3px;
+    margin: 4px;
+    font-size: 18px;
+    background-color: var(--yellow);
+    border: 3px solid var(--yellow);
+    color: var(--blue);
+    margin-top: 8px;
+}
+
+.all-content-container{
+    background-color: #f6f6f6;
+}
+
+.information-container{
+    padding: 56px 0;
+    border-bottom:1px solid #b2b4ba;
+}
+
+.accordion-cover{
+    margin-top: 32px;
+}
+
+.accordion-button{
+    font-size: 14px;
+}
+
+.accordion-body{
+    font-size:14px;
+    background: var(--accordionWhite);
+    border-top: 1px dashed #e1e1e1;
+    box-shadow: inset 0 8px 15px -6px var(--accordionShadow);
+    overflow: hidden;
+    transition-property: height;
+    transition-timing-function: ease-out;
+    will-change: height;
+}
+
+.accordion-button:not(.collapsed){
+    background-color: transparent;
+    color: var(--mainPink);
+}
+
+.accordion-button:focus{
+    border-color: var(--mainPink) !important;
+    box-shadow: 0 0 0 0.25rem var(--focusShadow);
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px;
+}
+
+.accordion-link{
+    color: var(--mainPink);
+}
+
+.accordion-link:hover{
+    color: var(--mainBlack);
+}
+
+.tel-number{
+    border-bottom: 2px solid var(--mainPink);
+}
+
+
+/* left-side-css */
+
+.text-block{
+    width: 46%;
+    padding-right: 24px;
+}
+.trip-title{
+    font-size: 22px;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+.trip-text{
+    font-size: 14px;
+    color: var(--mainBlack);
+    line-height: 1.6;
+}
+
+.route-container{
+    background: transparent;
+    border: 0;
+    box-shadow: 1px 1px 1px transparent;
+}
+
+.route{
+    margin: 0;
+    padding: 16px 28px 16px 16px;
+    cursor: pointer;
+    background: var(--mainWhite);
+    text-decoration: none;
+    color: var(--mainBlack);
+}
+
+.recommended{
+    font-size: 11px;
+    padding: 4px 8px;
+    color: var(--green);
+    background-color: #e6f2ee;
+    border-radius: 20px;
+    margin-bottom: 8px;
+}
+
+.route-vehicle{
+    font-size: 18px;
+    margin: 0 0 12px;
+}
+
+.train-icons i{
+    font-size: 24px;
+    margin-right: 4px;
+}
+
+.route-footer{
+    margin-top: 12px;
+    font-size: 14px;
+    color: var(--mediumGray);
+    margin-bottom: 4px;
+}
+
+.route{
+    margin-bottom: 4px;
+    transition: .2s all ease;
+}
+
+.route:hover{
+    color: var(--mainPink);
+}
+
+.route-price span{
+    margin-right: 10px;
+}
+
+.text-block2{
+    margin-top: 32px;
+}
+
+.route-info-cover{
+    padding: 24px;
+    box-shadow: 0 1px 15px 0 rgba(0,0,0,.15);
+    margin-top: 20px;
+}
+
+.route-summary i{
+    font-size: 32px;
+}
+
+.route-summary span{
+    display: block;
+    font-weight: 500;
+    color: var(--lightBlue);
+}
+
+.summary-count{
+    font-size: 20px;
+    margin-top: 18px;
+    margin-bottom: 8px;
+
+}
+
+.summary-interval{
+    font-size: 16px;
+}
+
+.ticket{
+    display: inline-block;
+    transform: rotate(140deg);
+}
+
+.see-button{
+    -webkit-appearance: none;
+    height: 48px;
+    background: var(--mainPink);
+    width: 40%;
+    margin: 22px auto 0;
+}
+
+.see-button i{
+    display: inline-block;
+    margin-left: 8px;
+}
+
+.travel-safe-header{
+    margin-top: 28px;
+}
+
+.travel-safe-heading{
+    background-color: #e6f2ee;
+    padding: 10px 10px 10px 24px;
+    white-space: nowrap;
+}
+
+.unrestricted{
+    background-color: var(--green);
+    padding: 10px 23px;
+}
+
+.travel-covid-cover{
+    background-color: var(--lightWhite9);
+    padding: 24px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,.07);
+    border: 1px solid var(--ecolor);
+}
+
+.travel-title{
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+.rules-title{
+    font-size: 18px;
+    margin-top:28px;
+}
+
+.social-distancing{
+    margin-top: 18px;
+    margin-bottom: 28px;
+    padding: 10px;
+}
+
+.social-distancing span i{
+    font-size: 32px;
+    background-color: #dedee4af;
+    padding: 8px;
+}
+
+.mrg-left{
+    margin-left: 42px;
+}
+
+.font14{
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.font14 a,
+.agency-details .agency-right p a{
+    box-shadow: inset 0 0 0 var(--mainWhite), inset 0 -2px 0 var(--insetColor);
+}
+
+.font14 a:hover,
+.agency-details .agency-right p a:hover{
+    color: var(--mainPink) !important;
+}
+
+.covid-related-text-cover{
+    margin-left: 4px;
+    margin-top: 32px;
+}
+
+.font12{
+    font-size: 13px;
+}
+
+.mrg-left2{
+    margin-left: 8px;
+}
+
+.accordion-header-text{
+    font-size: 11px;
+    padding: 0 0 8px 16px;
+    color: var(--lightGray);
+    line-height: 1;
+
+}
+
+.railway_img{
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.accordion-title{
+    margin-left: 8px !important;
+}
+
+.agency-details{
+    padding: 12px 16px 10px 0px;
+    margin: 0 0 0 30px;
+    border-bottom: 1px solid #6b6b6b6b;
+}
+
+.agency-details .agency-left p{
+    color: var(--mediumGray);
+    font-weight: 300;
+}
+
+.agency-left{
+    margin-right: 62px;
+}
+
+.agency-right{
+    margin-left: 62px;
+}
+
+.agency-right-mrg{
+    margin-left: 50px;
+}
+
+
+.agency-subheader-title h3{
+    margin-top: 32px;
+}
+
+.agency-subheader-title h3 i{
+    margin-right: 12px;
+}
+
+.agency-subheader-title{
+    margin-bottom: 16px;
+}
+
+.agency-images{
+    padding: 16px 26px 16px 0px;
+    margin-left: 19px;
+    margin-right: 4.5%;
+    position: relative;
+    left: -0.5%;
+    font-size: 0;
+}
+.agency-item a img{
+    width: 216px;
+    height: 146px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.agency-item2 a img{
+    width: 260px;
+    height: 146px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.agency-item3 a img{
+    width: 238px;
+    height: 136px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.agency-item4 a img{
+    width: 238px;
+    height: 136px;
+    object-fit: cover;
+    overflow: hidden;
+    display: inline-block;
+    margin-left: 22px;
+}
+
+.agency-item5 a img{
+    width: 215px;
+    height: 126px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.agency-item6 a img{
+    width: 260px;
+    height: 126px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.more-about-cover{
+    margin-top: 42px;
+}
+
+.guide-link{
+    overflow: hidden;
+    color: var(--mainBlack);
+    position: relative;
+    cursor: pointer;
+    background: var(--mainWhite);
+    box-shadow: 1px 1px 3px rgba(0,0,0,.07);
+    text-decoration: none;
+}
+
+.banner_img{
+    width: 184px;
+    height: 168px;
+    overflow: hidden;
+}
+
+.banner_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-content{
+    padding: 20px 40px 0px 18px;
+}
+
+.popular-routes{
+    background-color: var(--lightWhite9);
+    padding: 56px;
+}
+
+.routes-title{
+    content: "";
+    height: 1px;
+    background: var(--ecolor);
+    width: 82%;
+    position: relative;
+    top: 10px;
+    left: 6px;
+}
+
+.link_list-cover{
+    padding: 8px 8px 8px 38px;
+}
+
+.link_list-cover a{
+    line-height: 20px;
+    white-space: nowrap;
+    margin-right: 4px;
+    display: inline-block;
+    border: 1px solid #e1e1e1;
+    padding: 5px 7px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    box-shadow: inset 0 0 0 var(--mainWhite), inset 0 -1px 0 #ddd;
+    background: var(--mainWhite);
+    color: var(--mainBlack);
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.link_list-cover a:hover{
+    color: var(--mainPink);
+}
+
+.footer{
+    background: #232123;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.footer .wrapper{
+    padding: 50px 20px 30px;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.footer_select select,
+.lang-select{
+    height: 48px;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 0 48px 0 10px;
+    color: #999;
+    border: 1px solid hsla(0,0%,100%,.2);
+    background: hsla(0,0%,100%,.05);
+    width: 100%;
+}
+
+.lang-select{
+    margin-top: 8px;
+}
+
+.footer-cover p{
+    color: var(--mainWhite);
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.footer-cover a{
+    color: var(--mainWhite);
+    text-decoration: none;
+    border-bottom: 1px solid hsla(0,0%,100%,.175);
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.footer-cover a:hover{
+    border-bottom-color: var(--mainPink);
+}
+
+.footer-cover ul li{
+    margin-bottom: 8px;
+}
+
+.mb-12{
+    margin-bottom: 22px !important;
+}
+
+/* right-side css */
+
+.map_img{
+    width: 490px;
+    height: 264px;
+    overflow: hidden;
+}
+
+.launch-view{
+    top: 57%;
+    left: 50%;
+    background: var(--mainWhite);
+    border-radius: 16px;
+    font-size: 14px;
+    line-height: 32px;
+    box-shadow: 1px 1px 2px rgba(0,0,0,.1);
+    padding: 2px 13px 2px 18px;
+    margin-top: -30px;
+    transform: translateX(-50%);
+    transition: .4s all ease;
+}
+
+.launch-view i{
+    margin-right: 12px;
+}
+
+.launch-view:hover{
+    color: var(--mainWhite);
+    background-color: var(--mainPink);
+}
+
+.map-container{
+    margin-left: 12px;
+    margin-bottom: 30px;
+}
+
+.map-data{
+    background-color: var(--mainWhite);
+    width: 100%;
+}
+
+.map-data li{
+    width: 220px;
+    height: 46px;
+    padding: 16px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.map-data li:first-child {
+    border-right: 1px solid var(--ecolor);
+}
+
+.norway-info-container{
+    padding: 24px;
+    margin-left: 12px;
+    max-width: 490px;
+}
+
+.norway-info-title{
+    font-size:18px;
+}
+
+.norway-info-title a:hover{
+    color: var(--mainPink) !important;
+}
+
+.norway-flag{
+    height: 14px;
+    margin-right: 4px;
+    margin-left: 1px;
+}
+
+.norway-info-text{
+    margin-top:12px
+}
+.read-more{
+    border: 1px solid var(--lightBorderColor);
+    color: var(--lightGray)!important;
+    height: 14px;
+    padding: 0px 10px;
+    border-radius: 3px;
+}
+
+.dots{
+    top: -10px;
+    right: 3px;
+}
+
+.read-more:hover .dots{
+    color: var(--mainPink);
+}
+
+.read-more:hover{
+    border-color: var(--mainPink);
+}
+
+.to-do-title{
+    margin-top: 28px;
+    font-size: 16px;
+}
+
+.things-to-do-content{
+    margin-top: 14px;
+}
+
+.hotel-title, .hotel-info-text{
+    font-size:14px;
+}
+
+.hotel-info-text{
+    width: 110%;
+}
+
+.hotel-title{
+    margin-top:8px;
+    text-decoration: underline;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.hotels:hover{
+    color: var(--mainPink) !important;
+}
+
+.hotels{
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.hotel-img{
+    width: 120px;
+    height: 76px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.hotel-price{
+    background-color: rgba(17, 17, 17, 0.813);
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 6px;
+    top:56px;
+    font-size: 12px;
+    padding: 0 6px;
+    line-height: 20px;
+}
+
+.review-point{
+    margin-top: 4px;
+    line-height: 17px;
+    font-size: 11px;
+    color: var(--lightGray)
+}
+
+.point{
+    border: 1px solid var(--borderColor);
+    padding: 0 4px;
+    border-radius: 3px;
+    margin-top: 4px;
+    margin-right: 3px;
+    font-size: 11px;
+    vertical-align: baseline;
+}
+
+.text-info-container{
+    margin-top: 22px;
+    margin-left: 12px;
+    max-width: 490px;
+    padding: 24px;
+}
+
+.text-info-container p{
+    font-size: 14px;
+}
+
+.text-info-container p a{
+    box-shadow: inset 0 0 0 var(--mainWhite), inset 0 -2px 0 var(--insetColor);
+}
+
+.text-info-container p a:hover{
+    color: var(--mainPink) !important;
+}
